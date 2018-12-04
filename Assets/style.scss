@@ -1,0 +1,251 @@
+// Normalize imported from https://github.com/necolas/normalize.css/
+@import "normalize";
+
+
+// VARIABLES
+$roboto: 'Roboto', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
+
+$vermelho: #AA1423;
+$gray: #777777;
+$light-gray: #EEEEEE;
+$orange: #FF6E14;
+
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Slab:300,400,700');
+
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+
+h3{
+	font-size: 32px;
+	font-weight: 400;
+	color: $vermelho;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: $roboto-slab;
+	margin: 0 0 30px;
+	padding-top: 50px;
+}
+
+
+// COMPONENTES
+body{
+	font-family: $roboto;
+}
+
+
+.flex{
+	display: flex;
+	justify-content: flex-start;
+
+	&.justify-content-between{
+		justify-content: space-between;
+	}
+	&.justify-content-center{
+		justify-content: center;
+	}
+	&.align-items-center{
+		align-items: center;
+	}
+
+	&.flex-nowrap{
+		flex-wrap: nowrap;
+	}
+}
+
+.wrapper{
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+ 
+ 	&.wrapper-thin{
+		max-width: 460px;
+ 	}
+}
+
+// HEADER
+header{
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 16px 0 9px;
+	z-index: 999;
+
+	h1{
+		margin: 0;
+		line-height: 0;
+	}
+}
+
+// FORM / BANNER
+#form.banner{
+	position: relative;
+	padding: 200px 0 150px;;
+	background-color: #c70c1f;
+	background-image: url('./background-home.jpg');
+	background-size: cover;
+	background-position: center;
+
+	.caption{
+		color: #fff;
+
+		h2{
+			font-size: 36px;
+			line-height: 1.8;
+			font-family: $roboto-slab;
+			margin: 0;
+		}
+		p{
+			font-size: 16px;
+			line-height: 1.4;
+			margin: 0;
+		}
+
+		form{
+			margin: 40px 0;
+
+			label{
+				width: 100%;
+				height: 38px;
+				margin-right: 10px;
+
+				input{
+					display: block;
+					background: none;
+					border: 0;
+					border-bottom: 2px solid $orange;
+					line-height: 36px;
+					padding: 0 4px;
+					width: 100%;
+					color: $orange;
+					box-sizing: border-box;
+
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						font-size: 16px;
+						color: $orange;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+						font-size: 16px;
+						color: $orange;
+					}
+					&:-ms-input-placeholder { /* IE 10+ */
+						font-size: 16px;
+						color: $orange;
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+						font-size: 16px;
+						color: $orange;
+					}
+
+					&:focus {
+						outline: 0;
+					}
+				}
+
+			}
+
+			button{
+				cursor: pointer;
+				line-height: 38px;
+				padding: 0 12px;
+				background-color: $orange;
+				font-size: 16px;
+				color: #FFFFFF;
+				font-weight: 700;
+				text-transform: uppercase;
+				border: 0;
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+
+// TOP 5
+ul.top-list{
+	margin: 0 0 50px;
+	padding: 0;
+	list-style: none;
+
+	li{
+		font-size: 16px;
+		line-height: 40px;
+		border-bottom: 1px solid $light-gray;
+
+		&:last-child{
+			border-bottom: 0;
+		}
+
+		a{
+			color: $vermelho;
+			font-weight: 700;
+			text-decoration: none;
+		}
+		span{
+			color: $gray;
+		}
+	}
+}
+
+section#hits{
+	position: relative;
+	padding: 20px 0 40px;
+	background-color: $light-gray;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -36px;
+		width: 0;
+		height: 0;
+		border-left: 36px solid transparent;
+		border-right: 36px solid transparent;
+		border-top: 35px solid #FFFFFF;
+	}
+
+	#count{
+		display: inline-block;
+		background-color: #FFFFFF;
+		border: 1px solid #D2D2D2;
+		border-radius: 4px;
+
+		h3{
+			line-height: 1.5;
+			margin: 0;
+			padding-top: 0;
+			padding: 0 14px;
+		}
+	}
+	p{
+		color: $gray;
+		margin: 10px 0;
+	}
+}
+
+footer{
+	padding: 18px 0;
+
+	a{
+		font-size: 20px;
+		color: $vermelho;
+		text-decoration: none;
+	}
+
+	.social{
+		a{
+			margin-left: 20px;
+		}
+	}
+}
