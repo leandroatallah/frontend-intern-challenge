@@ -115,20 +115,38 @@ header{
 			margin: 40px 0;
 
 			label{
+				position: relative;
 				width: 100%;
 				height: 38px;
 				margin-right: 10px;
+				border-bottom: 2px solid $orange;
+
+				div#result{
+					display: none;
+					color: #fff;
+					line-height: 36px;
+					width: 100%;
+
+					span#close{
+						cursor: pointer;
+						font-size: 14px;
+						font-weight: 400;
+						color: #fff;
+						position: absolute;
+						right: 0;
+						line-height: 36px;
+					}
+				}
 
 				input{
 					display: block;
-					background: none;
-					border: 0;
-					border-bottom: 2px solid $orange;
 					line-height: 36px;
-					padding: 0 4px;
 					width: 100%;
-					color: $orange;
 					box-sizing: border-box;
+					border: 0;
+					background: none;
+					padding: 0 4px;
+					color: $orange;
 
 					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 						font-size: 16px;
@@ -151,11 +169,12 @@ header{
 						outline: 0;
 					}
 				}
-
 			}
 
 			button{
+				position: relative;
 				cursor: pointer;
+				width: 120px;
 				line-height: 38px;
 				padding: 0 12px;
 				background-color: $orange;
@@ -165,11 +184,22 @@ header{
 				text-transform: uppercase;
 				border: 0;
 				border-radius: 0;
+
+				span{
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate3d(-50%,-50%,0);
+
+					&.valid{
+						display: none;
+					}
+				}
 			}
 		}
 	}
 }
-
 
 // TOP 5
 ul.top-list{

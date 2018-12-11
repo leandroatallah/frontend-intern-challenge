@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title>Chaordic - Encurte seus links.</title>
 	<link rel="stylesheet" type="text/css" href="Assets/style.css">
-	<script type="text/javascript" src="Assets/script.js"></script>
 </head>
 <body>
 	<header class="text-center">
@@ -23,12 +22,16 @@
 					<p>Links são longos. Encurte os links que você deseja compartilhar, e acompanhe enquanto viajam através da internet.</p>
 				</div>
 
-				<form action="" method="">
+				<form action="" method="post">
 					<div class="flex justify-content-between flex-nowrap">
 						<label>
-							<input type="text" name="link" placeholder="Cole o seu link aqui" />
+							<input type="text" name="link" id="link" placeholder="Cole o seu link aqui" required />
+							<div id="result" data-clipboard-text="">
+								<span id="value"></span>
+								<span id="close">✕</span>
+							</div>
 						</label>
-						<button type="submit">encurtar</button>
+						<button type="submit"><span class="default">encurtar</span><span class="valid">copiar</span></button>
 					</div>
 				</form>
 			</div>
@@ -83,5 +86,13 @@
 			</div>
 		</div>
 	</footer>
+
+	<button class="btn" data-clipboard-text="caçamba">
+	    Copy to clipboard
+	</button>
+
+	<script type="text/javascript" src="Assets/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="Assets/clipboard.js"></script>
+	<script type="text/javascript" src="Assets/scripts.js"></script>
 </body>
 </html>
