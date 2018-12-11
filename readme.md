@@ -1,3 +1,8 @@
+Desafio concluído:
+https://leandroatallah.github.io/frontend-intern-challenge/
+
+---
+
 # Desafio estagiário: HTML/CSS/JS
 
 > **ATENÇÃO:** Antes de começar, se [cadastre na vaga](https://linxneemuchaordic.recruiterbox.com/) via Recruiterbox **=]**
