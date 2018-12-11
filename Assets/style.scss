@@ -197,6 +197,26 @@ header{
 					}
 				}
 			}
+
+			&.error{
+				small.error-label{
+					margin-top: 0;
+					opacity: 1;
+				}
+			}
+		}
+
+		small.error-label{
+			position: absolute;
+			color: $orange;
+			font-style: italic;
+			font-size: 12px;
+			letter-spacing: .5px;
+			line-height: 2;
+			margin-top: -20px;
+			display: block;
+			opacity: 0;
+			transition: .4s all ease;
 		}
 	}
 }

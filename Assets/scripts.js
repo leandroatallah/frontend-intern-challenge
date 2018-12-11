@@ -11,9 +11,11 @@ $(function(){
 		btnSubmit = $('form button');
 		
 
+
 		if($(this).find('span.valid').is(':visible')){
-			
+			// copy to clipboard
 		}
+
 
 		// Check if input value is a valid URL
 		if(/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test(inputLink.val())) {
@@ -29,7 +31,6 @@ $(function(){
 		} else {
 			// Add class error to form
 			$(this).addClass('error');
-			inputLink.attr('disabled', '');
 		}
 	});
 
