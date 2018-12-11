@@ -49,6 +49,20 @@ $(function(){
 	});
 
 	$.get( './Assets/urls.json', function(data) {
-         console.log(data);
+		// Reorder the object by property hits
+		data.sort(function compare(a,b) {
+		  if (a.hits < b.hits)
+		    return 1;
+		  if (a.hits > b.hits)
+		    return -1;
+		  return 0;
+		});
+
+         data.slice(0, 5).forEach(function(o, index){
+         	$('#top5 ul.top-list').append(
+         		`<li class="flex justify-content-between">
+         			<a href="`+o['shortUrl']+`" target="_blank">`+o['shortUrl']+`</a> <span>`+o['hits']+`</span></li>`
+         	);
+         });
     });
 });

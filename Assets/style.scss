@@ -11,6 +11,8 @@ $gray: #777777;
 $light-gray: #EEEEEE;
 $orange: #FF6E14;
 
+$responsive: "screen and (max-width: 1024px)";
+
 // TYPOGRAPHY
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700|Roboto+Slab:300,400,700');
 
@@ -68,7 +70,7 @@ body{
  
  	&.wrapper-thin{
 		max-width: 460px;
- 	}
+	}
 }
 
 // HEADER
@@ -104,11 +106,19 @@ header{
 			line-height: 1.8;
 			font-family: $roboto-slab;
 			margin: 0;
+
+			@media #{$responsive} {
+				font-size: 26px;
+			}
 		}
 		p{
 			font-size: 16px;
 			line-height: 1.4;
 			margin: 0;
+
+			@media #{$responsive} {
+				font-size: 14px;
+			}
 		}
 
 		form{
@@ -191,6 +201,10 @@ header{
 					top: 50%;
 					left: 50%;
 					transform: translate3d(-50%,-50%,0);
+
+					@media #{$responsive} {
+						font-size: 14px;
+					}
 
 					&.valid{
 						display: none;
@@ -297,5 +311,16 @@ footer{
 		a{
 			margin-left: 20px;
 		}
+	}
+}
+
+section{
+	@media #{$responsive} {
+		padding: 0 10px;
+	}
+}
+footer{
+	@media #{$responsive} {
+		padding: 15px 10px;
 	}
 }
