@@ -47,4 +47,8 @@ $(function(){
 		btnSubmit.find('.valid').fadeOut(400);
 		btnSubmit.find('.default').delay(400).fadeIn(400);
 	});
+
+	$.get( './Assets/urls.json', function(data) {
+         console.log(data);
+    });
 });
